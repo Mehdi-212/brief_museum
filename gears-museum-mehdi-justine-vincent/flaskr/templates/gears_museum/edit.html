@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}The gears museum{% endblock %}</h1>
+
+{% endblock %}
+
+{% block content %}
+    <h1>Edit information</h1>
+    <form action="{{ url_for('museum.edit', id=existing_values[0]) }}" method="POST" enctype = "multipart/form-data">
+    <div class="formulaire_edit">
+        <div class="Titre">
+            <!-- Champ de type "text" -->
+            <label for="name">Name: </label>
+            <input class="name" type="text" name="name" id="name" value="{{ existing_values[1] }}" >
+        </div>
+        
+        <div class="Benefits">
+            <!-- Champ de type "text" -->
+            <label for="benefits">Benefits: </label>
+            <input class ='benefits' type="text" name="benefits" id="benefits" value="{{ existing_values[2] }}">
+        </div>
+
+        <div class="Drawback">
+            <!-- Champ de type "text" -->
+            <label for="drawbacks">Drawbacks: </label>
+            <input class='drawbacks' type="text" name="drawbacks" id="drawbacks" value="{{ existing_values[3] }}" >
+        </div>
+
+        <div class="Image">
+            <!-- Champ de type "text" -->
+            <label for="Image">Image: </label>
+            <input type="file" name="image" id="image" >
+        </div>
+
+        <div class="button">
+            <button type="submit">Save</button> 
+            
+        </div>
+    </form>
+    </div>
+        <div class="button">
+            <a href="{{ url_for('museum.delete', id=existing_values[0]) }}">
+            <button type="submit">Delete</button>
+            </a>
+        </div>
+  
+    
+{% endblock %}

@@ -1,0 +1,29 @@
+#gears_list_header {
+	width: 100px;
+ 	height: 100px;
+  	display: inline;
+  	flex-direction:row-reverse;
+	padding: 200px; /* Marge intérieure*/
+	margin: 400px; /* Marge extérieure */
+}/*
+.gear {
+	width: 100px;
+ 	height: 100px;
+  	display: inline-block;
+  	flex-direction: column-reverse;
+}*/
+.gear_image {
+	text-align: center;
+	width: 70%;
+}
+
+.gear_name {
+  	display: flex;
+	margin-bottom: 10px;
+}
+
+.gear_info {
+	width: 100%;
+  	display: flex;
+	margin-bottom: 10px;
+}

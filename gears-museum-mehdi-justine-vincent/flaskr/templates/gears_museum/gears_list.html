@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      {{ message }}
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+{% block header %}
+  <h1>{% block title %}The gears museum{% endblock %}</h1>
+  {% if g.user %}
+    <a class="action" href="{{ url_for('museum.add') }}">Add</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+  {% for gear in gears %}
+      <div id="gears_list_header">
+          <div class="gear_name">Name:  {{ gear[1] }}</div>
+
+          <div class="gear_image">
+          <img src="data:;base64,{{ gear[4] }}" class='gear_image'/>
+          </div>
+          <div class="gear_info">Benefits:  {{ gear[2] }}</div>
+          
+          <div class="gear_info">Drawbacks: {{ gear[3] }}</div>
+          
+          <div class="gear_info">Added on:  {{ gear[5] }}</div>     
+          
+          <div class="gear_info">Contributor: Added by {{ gear[6] }}</div>           
+  
+      </div>
+          <!-- Penser à modifier ça proprement plus tard -->    
+          <a class="action" href="{{ url_for('museum.edit', id=gear[0]) }}">Edit</a>
+
+        </div>
+    {% if not loop.last %}
+      <hr>
+    {% endif %}
+  {% endfor %}
+{% endblock %}

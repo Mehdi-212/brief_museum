@@ -1,0 +1,174 @@
+html {
+  font-family: sans-serif;
+  background: #226D68;
+  padding: 1rem;
+}
+/*modifier le carré ou ce trouve nos commentaire*/
+body {
+  border-top-left-radius: 30px 30px;
+  border-top-right-radius: 30px 30px;
+  border-bottom-left-radius: 50px 50px;
+  border-bottom-right-radius: 50px 50px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #FEEAA1;
+}
+/*permet de mettre les noms qui sont designer comme des titres au centre*/
+h1 {
+  font-family: sans-serif;
+  color: #18534F;
+  margin: 1rem 0;
+}
+a {
+  color: #18534F;
+}
+/* barre qui se trouve entre chaque commentaires*/
+hr {
+  border: none;
+  border-top: 2px solid #226D68;
+}
+/* permet de bouger les elements dans la barre de navigation*/
+nav {
+  border-bottom-left-radius: 80px 80px;
+  border-bottom-right-radius: 80px 80px;
+  border-top-left-radius: 80px 80px;
+  border-top-right-radius: 80px 80px;
+  background: #D6955B;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+/*modifier en vertical la nav*/
+nav h1 {
+  flex: auto;
+  margin: 5px;
+}
+/*modifie l'espace avec le titre flaskr*/
+nav h1 a {
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+}
+/*permet de rajouter des points devant blog/museum/log out*/
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/*modifie la bar nav et le gears museum*/
+nav ul li a,
+nav ul li span,
+header .action {
+  display: block;
+  padding: 0.5rem;
+}
+.content {
+  padding: 1rem ;
+  min-height: 600px;
+}
+/*modifie l'emplacement de add*/
+.content > header {
+  border-bottom: 3px solid #226D68 ;
+  display: flex;
+  align-items: flex-start;
+}
+/*modifie l'emplacement du titre gears*/
+.content > header h1 {
+  flex: auto;
+  margin: 0.25rem 0 0.25rem 0;
+}
+.flash {
+  margin: 1em 0;
+  padding: 1em;
+  background: #cae6f6;
+  border: 1px solid #377ba8;
+}
+/*modifie les posts*/
+.post > header {
+  display: flex;
+  align-items: flex-end;
+  font-size: 0.85em;
+}
+.post > header > div:first-of-type {
+  flex: auto;
+}
+.post > header h1 {
+  font-size: 3em;
+  margin-bottom: 0;
+}
+.post .about {
+  color: slategray;
+  font-style: italic;
+}
+.post .body {
+  white-space: normal;
+}
+/*modifie  les new post*/
+.content:last-child {
+  margin-bottom: 0;
+}
+.content form {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+}
+.content label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+.content input,
+.content textarea {
+  margin-bottom: 1em;
+}
+.content textarea {
+  min-height: 12em;
+  resize: vertical;
+}
+input.danger {
+  color: #cc2f2e;
+}
+input[type="submit"] {
+  align-self: start;
+  min-width: 10em;
+}
+
+/*modifi le formulaire add et edit*/
+
+.Titre .name{
+  width: 80%;
+  text-align: center;
+
+}
+
+.Benefits .benefits{
+  width: 80%;
+}
+
+.Drawback .drawbacks{
+  width: 80%;
+}
+
+.button button {
+  border-radius: 6%;
+  border: #cc2f2e solid 2px;
+  background-color: #cc2f2e;
+  color: azure;
+  width: 50px;
+  height: 50px ;
+}
+
+.button {
+  margin-bottom: 1px;
+  text-align: center;
+}
+
+.formulaire_add {
+  text-align: center;
+}
+
+.formulaire_edit {
+  text-align: center;
+}
+
+
+

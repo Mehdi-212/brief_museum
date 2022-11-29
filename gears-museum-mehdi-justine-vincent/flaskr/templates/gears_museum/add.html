@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}The gears museum{% endblock %}</h1>
+  {% if g.user %}
+    <a class="action" href="{{ url_for('museum.add') }}">Add</a>
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+    <h1>Add a gear</h1>
+    <form action="{{ url_for('museum.add') }}" method="POST" enctype = "multipart/form-data">
+    <div class="formulaire_add">
+        <div class="Titre">
+            <!-- Champ de type "text" -->
+            <label for="name">Name: </label>
+            <input class="name" type="text" name="name" id="name" required>
+        </div>
+        
+        <div class="Benefits">
+            <!-- Champ de type "text" -->
+            <label for="benefits">Benefits : </label>
+            <input class="benefits" type="text" name="benefits" id="benefits" required>
+        </div>
+
+        <div class="Drawback">
+            <!-- Champ de type "text" -->
+            <label for="drawbacks">Drawback : </label>
+            <input  class='drawbacks' type="text" name="drawbacks" id="drawbacks" required>
+        </div>
+
+        <div class="Image">
+            <label for="image">Image : </label>
+            <input type="file" name="image" id="image" required>
+        </div>
+
+        <div class="button">
+            <button type="submit">Save</button>
+        </div>
+    </div>
+    </form>
+    
+{% endblock %}
